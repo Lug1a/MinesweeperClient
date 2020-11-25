@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialog</class>
+ <widget class="QDialog" name="dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>管理员账号管理</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>20</y>
+     <width>102</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>玩家账号管理</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>401</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="midLineWidth">
+    <number>-12</number>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <row>
+    <property name="text">
+     <string>玩家1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>玩家2</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>管理员ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>用户名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>密码</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>删除管理员</string>
+    </property>
+   </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string>123456</string>
+    </property>
+   </item>
+   <item row="0" column="1">
+    <property name="text">
+     <string>小红</string>
+    </property>
+   </item>
+   <item row="0" column="2">
+    <property name="text">
+     <string>123123</string>
+    </property>
+   </item>
+   <item row="0" column="3">
+    <property name="text">
+     <string>删除</string>
+    </property>
+   </item>
+   <item row="1" column="0">
+    <property name="text">
+     <string>654321</string>
+    </property>
+   </item>
+   <item row="1" column="1">
+    <property name="text">
+     <string>小明</string>
+    </property>
+   </item>
+   <item row="1" column="2">
+    <property name="text">
+     <string>234234</string>
+    </property>
+   </item>
+   <item row="1" column="3">
+    <property name="text">
+     <string>删除</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>280</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加管理员</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>tableWidget</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
